@@ -3,11 +3,12 @@
 #It is super useful if you have lots of large images to upload and don't want to handle them individually. 
 from google.colab import drive
 drive.mount('/content/drive')
-!CC="cc -mavx2" pip install -U --force-reinstall pillow-simd
+!CC="cc -mavx2" pip install -U --force-reinstall pillow-simd # find the documentation at https://github.com/uploadcare/pillow-simd
 import PIL
 from PIL import Image
 import glob
 import os
+#For some reason, when I run this in Colab, I have to run this section as a separate cell, then restart the runtime environment and run it again before the second section will work. 
 
 import requests 
 import json
